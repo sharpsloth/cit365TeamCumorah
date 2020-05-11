@@ -1,0 +1,14 @@
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\bin\Debug\MegaDesk-Mendenhall.exe.config
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\bin\Debug\MegaDesk-Mendenhall.exe
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\bin\Debug\MegaDesk-Mendenhall.pdb
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk-Mendenhall.csprojAssemblyReference.cache
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk_Mendenhall.MainMenu.resources
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk_Mendenhall.Properties.Resources.resources
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk-Mendenhall.csproj.GenerateResource.cache
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk-Mendenhall.csproj.CoreCompileInputs.cache
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk-Mendenhall.exe
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk-Mendenhall.pdb
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk_Mendenhall.AddQuote.resources
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk_Mendenhall.DisplayQuote.resources
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk_Mendenhall.SearchQuotes.resources
+C:\Users\Clarisse\source\repos\CIT365-S2020-MendenhallClarisse\MegaDesk-Mendenhall\obj\Debug\MegaDesk_Mendenhall.ViewAllQuotes.resources
