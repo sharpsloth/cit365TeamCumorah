@@ -58,7 +58,7 @@ namespace MegaDesk_Mendenhall
         public int GetRushCost() { return rushCost; }
         public int CalcMaterialCost()
         {
-            string material = desk.Material;
+            string material = desk.material.ToString();
             int cost = 0;
             switch (material)
             {

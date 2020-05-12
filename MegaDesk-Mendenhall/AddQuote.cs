@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -21,6 +23,12 @@ namespace MegaDesk_Mendenhall
             {
                 materialSelection.Items.Add(item);
             }
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            // Jose Concha
+            MainMenu viewMainMenu = (MainMenu)Tag;
+            viewMainMenu.Show();
         }
 
         private void AddQuoteCancelBttn_Click(object sender, EventArgs e)
@@ -51,8 +59,62 @@ namespace MegaDesk_Mendenhall
             }
 
             int shipDays = (int)shippingBox.Tag;
-            DisplayQuote viewQuote = new DisplayQuote(nameBox.Text, depthBox.Text, 
+            DisplayQuote viewQuote = new DisplayQuote(nameBox.Text, depthBox.Text,
                 widthBox.Text, drawerSelection.Text, materialSelection.Text, shipDays);
+            // Jose Concha
+            int deskWidth = 0;
+            int deskWidthValue = 0;
+            int deskDepth = 0;
+            int deskDepthValue = 0;
+            int deskDrawers = 0;
+            int deskDrawersValue = 0;
+
+            if (int.TryParse(widthBox.Text, out deskWidthValue))
+            {
+                deskWidth = deskWidthValue;
+            }
+            else
+            {
+                return;
+            }
+            if (int.TryParse(depthBox.Text, out deskDepthValue))
+            {
+                deskDepth = deskDepthValue;
+            }
+            else
+            {
+                return;
+            }
+            if (int.TryParse(drawerSelection.Text, out deskDrawersValue))
+            {
+                deskDrawers = deskDrawersValue;
+            }
+            else
+            {
+                return;
+            }
+
+            //Desk desk = new Desk(deskDepth, deskWidth, deskDrawers, materialSelection.Text);
+            DeskQuote deskQuote = new DeskQuote(nameBox.Text, deskDepth, deskWidth,
+                deskDrawers, materialSelection.Text, shipDays);
+            string jsonWrite = JsonConvert.SerializeObject(deskQuote);
+            string jsonFile = @"quotes.json";
+            try
+            {
+                if (!File.Exists(jsonFile))
+                {
+                    using (StreamWriter sw = File.CreateText(jsonFile)) { }
+                }
+                using (StreamWriter swa = File.AppendText(jsonFile)) { swa.WriteLine(jsonWrite); }
+            }
+            catch (IOException err)
+            {
+                // Extract some information from this exception, and then
+                // throw it to the parent method.
+                if (err.Source != null)
+                    Console.WriteLine("IOException source: {0}", err.Source);
+                throw;
+            }
             viewQuote.Tag = this.Tag;
             viewQuote.Show(this);
             this.Hide();
@@ -88,7 +150,7 @@ namespace MegaDesk_Mendenhall
         }
         public bool ValidDepthNumbers(string text, out string errorMessage)
         {
-                int num = int.Parse(text);
+            int num = int.Parse(text);
             if (num < 49 && num > 11)
             {
                 errorMessage = "";

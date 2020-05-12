@@ -1,0 +1,7 @@
+C:\Users\Usuario\source\repos\cit365TeamCumorah\obj\Debug\MegaDesk-Mendenhall.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\cit365TeamCumorah\obj\Debug\MegaDesk_Mendenhall.AddQuote.resources
+C:\Users\Usuario\source\repos\cit365TeamCumorah\obj\Debug\MegaDesk_Mendenhall.DisplayQuote.resources
+C:\Users\Usuario\source\repos\cit365TeamCumorah\obj\Debug\MegaDesk_Mendenhall.MainMenu.resources
+C:\Users\Usuario\source\repos\cit365TeamCumorah\obj\Debug\MegaDesk_Mendenhall.SearchQuotes.resources
+C:\Users\Usuario\source\repos\cit365TeamCumorah\obj\Debug\MegaDesk_Mendenhall.ViewAllQuotes.resources
+C:\Users\Usuario\source\repos\cit365TeamCumorah\obj\Debug\MegaDesk-Mendenhall.csproj.GenerateResource.cache

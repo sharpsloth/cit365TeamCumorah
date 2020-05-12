@@ -44,6 +44,12 @@ namespace MegaDesk_Mendenhall
             viewMainMenu.Show();
             Close();
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            // Jose Concha
+            MainMenu viewMainMenu = (MainMenu)Tag;
+            viewMainMenu.Show();
+        }
 
     }
 }

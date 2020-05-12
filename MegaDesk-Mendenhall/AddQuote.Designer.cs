@@ -57,7 +57,7 @@ namespace MegaDesk_Mendenhall
             // 
             this.submitQuote.BackColor = System.Drawing.Color.White;
             this.submitQuote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitQuote.Font = new System.Drawing.Font("Roboto Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitQuote.Location = new System.Drawing.Point(120, 300);
             this.submitQuote.Margin = new System.Windows.Forms.Padding(20);
             this.submitQuote.Name = "submitQuote";
@@ -72,7 +72,7 @@ namespace MegaDesk_Mendenhall
             this.AddQuoteCancelBttn.BackColor = System.Drawing.Color.White;
             this.AddQuoteCancelBttn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.AddQuoteCancelBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddQuoteCancelBttn.Font = new System.Drawing.Font("Roboto Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddQuoteCancelBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddQuoteCancelBttn.Location = new System.Drawing.Point(330, 300);
             this.AddQuoteCancelBttn.Margin = new System.Windows.Forms.Padding(20);
             this.AddQuoteCancelBttn.Name = "AddQuoteCancelBttn";
@@ -84,30 +84,30 @@ namespace MegaDesk_Mendenhall
             // 
             // nameBox
             // 
-            this.nameBox.Font = new System.Drawing.Font("Roboto Slab", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameBox.Location = new System.Drawing.Point(283, 98);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(150, 25);
+            this.nameBox.Size = new System.Drawing.Size(150, 22);
             this.nameBox.TabIndex = 2;
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Font = new System.Drawing.Font("Roboto Slab Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.Location = new System.Drawing.Point(229, 101);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Padding = new System.Windows.Forms.Padding(2);
-            this.nameLabel.Size = new System.Drawing.Size(48, 22);
+            this.nameLabel.Size = new System.Drawing.Size(53, 20);
             this.nameLabel.TabIndex = 4;
             this.nameLabel.Text = "Name";
             // 
             // widthBox
             // 
-            this.widthBox.Font = new System.Drawing.Font("Roboto Slab", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.widthBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.widthBox.Location = new System.Drawing.Point(283, 160);
             this.widthBox.Name = "widthBox";
-            this.widthBox.Size = new System.Drawing.Size(150, 25);
+            this.widthBox.Size = new System.Drawing.Size(150, 22);
             this.widthBox.TabIndex = 4;
             this.widthBox.Validating += new System.ComponentModel.CancelEventHandler(this.widthBox_Validating);
             this.widthBox.Validated += new System.EventHandler(this.widthBox_Validated);
@@ -116,20 +116,20 @@ namespace MegaDesk_Mendenhall
             // 
             this.widthLabel.AutoSize = true;
             this.widthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.widthLabel.Font = new System.Drawing.Font("Roboto Slab Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.widthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.widthLabel.Location = new System.Drawing.Point(227, 163);
             this.widthLabel.Name = "widthLabel";
             this.widthLabel.Padding = new System.Windows.Forms.Padding(2);
-            this.widthLabel.Size = new System.Drawing.Size(50, 22);
+            this.widthLabel.Size = new System.Drawing.Size(51, 20);
             this.widthLabel.TabIndex = 8;
             this.widthLabel.Text = "Width";
             // 
             // depthBox
             // 
-            this.depthBox.Font = new System.Drawing.Font("Roboto Slab", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depthBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.depthBox.Location = new System.Drawing.Point(284, 129);
             this.depthBox.Name = "depthBox";
-            this.depthBox.Size = new System.Drawing.Size(150, 25);
+            this.depthBox.Size = new System.Drawing.Size(150, 22);
             this.depthBox.TabIndex = 3;
             this.depthBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depthBox_KeyPress);
             this.depthBox.Validating += new System.ComponentModel.CancelEventHandler(this.depthBox_Validating);
@@ -139,11 +139,11 @@ namespace MegaDesk_Mendenhall
             // 
             this.depthLabel.AutoSize = true;
             this.depthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.depthLabel.Font = new System.Drawing.Font("Roboto Slab Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.depthLabel.Location = new System.Drawing.Point(229, 132);
             this.depthLabel.Name = "depthLabel";
             this.depthLabel.Padding = new System.Windows.Forms.Padding(2);
-            this.depthLabel.Size = new System.Drawing.Size(49, 22);
+            this.depthLabel.Size = new System.Drawing.Size(53, 20);
             this.depthLabel.TabIndex = 7;
             this.depthLabel.Text = "Depth";
             // 
@@ -151,17 +151,17 @@ namespace MegaDesk_Mendenhall
             // 
             this.drawersLabel.AutoSize = true;
             this.drawersLabel.BackColor = System.Drawing.Color.Transparent;
-            this.drawersLabel.Font = new System.Drawing.Font("Roboto Slab Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drawersLabel.Location = new System.Drawing.Point(211, 191);
             this.drawersLabel.Name = "drawersLabel";
             this.drawersLabel.Padding = new System.Windows.Forms.Padding(2);
-            this.drawersLabel.Size = new System.Drawing.Size(66, 22);
+            this.drawersLabel.Size = new System.Drawing.Size(69, 20);
             this.drawersLabel.TabIndex = 9;
             this.drawersLabel.Text = "Drawers";
             // 
             // drawerSelection
             // 
-            this.drawerSelection.Font = new System.Drawing.Font("Roboto Slab", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drawerSelection.Location = new System.Drawing.Point(283, 191);
             this.drawerSelection.Maximum = new decimal(new int[] {
             7,
@@ -169,16 +169,16 @@ namespace MegaDesk_Mendenhall
             0,
             0});
             this.drawerSelection.Name = "drawerSelection";
-            this.drawerSelection.Size = new System.Drawing.Size(75, 25);
+            this.drawerSelection.Size = new System.Drawing.Size(75, 22);
             this.drawerSelection.TabIndex = 5;
             this.drawerSelection.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // materialSelection
             // 
-            this.materialSelection.Font = new System.Drawing.Font("Roboto Slab", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialSelection.Location = new System.Drawing.Point(283, 222);
             this.materialSelection.Name = "materialSelection";
-            this.materialSelection.Size = new System.Drawing.Size(100, 25);
+            this.materialSelection.Size = new System.Drawing.Size(100, 22);
             this.materialSelection.TabIndex = 6;
             this.materialSelection.Text = "Pine";
             this.materialSelection.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -188,11 +188,11 @@ namespace MegaDesk_Mendenhall
             // 
             this.materialLabel.AutoSize = true;
             this.materialLabel.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel.Font = new System.Drawing.Font("Roboto Slab Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialLabel.Location = new System.Drawing.Point(213, 222);
             this.materialLabel.Name = "materialLabel";
             this.materialLabel.Padding = new System.Windows.Forms.Padding(2);
-            this.materialLabel.Size = new System.Drawing.Size(65, 22);
+            this.materialLabel.Size = new System.Drawing.Size(68, 20);
             this.materialLabel.TabIndex = 11;
             this.materialLabel.Text = "Material";
             // 
@@ -200,24 +200,24 @@ namespace MegaDesk_Mendenhall
             // 
             this.shippingLabel.AutoSize = true;
             this.shippingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.shippingLabel.Font = new System.Drawing.Font("Roboto Slab Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shippingLabel.Location = new System.Drawing.Point(213, 253);
             this.shippingLabel.Name = "shippingLabel";
             this.shippingLabel.Padding = new System.Windows.Forms.Padding(2);
-            this.shippingLabel.Size = new System.Drawing.Size(68, 22);
+            this.shippingLabel.Size = new System.Drawing.Size(73, 20);
             this.shippingLabel.TabIndex = 13;
             this.shippingLabel.Text = "Shipping";
             // 
             // shippingBox
             // 
-            this.shippingBox.Font = new System.Drawing.Font("Roboto Slab", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shippingBox.Items.Add("3 Days");
             this.shippingBox.Items.Add("5 Days");
             this.shippingBox.Items.Add("7 Days");
             this.shippingBox.Items.Add("14 Days");
             this.shippingBox.Location = new System.Drawing.Point(283, 253);
             this.shippingBox.Name = "shippingBox";
-            this.shippingBox.Size = new System.Drawing.Size(100, 25);
+            this.shippingBox.Size = new System.Drawing.Size(100, 22);
             this.shippingBox.TabIndex = 7;
             this.shippingBox.Text = "14 Days";
             this.shippingBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

@@ -19,7 +19,9 @@ namespace MegaDesk_Mendenhall
         private int width;
         private int depth;
         private int drawers;
-        private string material;
+        //      private string material;
+        public DesktopMaterial material;
+
         private int area;
         protected int MIN_WIDTH { get; set; } = 24;
         protected int MAX_WIDTH { get; set; } = 96;
@@ -29,7 +31,9 @@ namespace MegaDesk_Mendenhall
         public int Width { get { return width; } set { width = value; } }
         public int Depth { get { return depth; } set { depth = value; } }
         public int Drawers { get { return drawers; } set { drawers = value; } }
-        public string Material { get { return material; } set { material = value; } }
+        //        public string Material { get { return material; } set { material = value; } }
+//        public DesktopMaterial Material; 
+
         public int Area { get { return area; } set { area = value; } }
 
         public Desk(int depth, int width, int drawers, string material)
@@ -37,7 +41,8 @@ namespace MegaDesk_Mendenhall
             this.width = width;
             this.depth = depth;
             this.drawers = drawers;
-            this.material = material;
+            //            this.material = material;
+            this.material = (DesktopMaterial)Enum.Parse(typeof(DesktopMaterial), material);
             this.area = CalcArea();
 
         }

@@ -16,7 +16,12 @@ namespace MegaDesk_Mendenhall
         {
             InitializeComponent();
         }
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            // Jose Concha
+            MainMenu viewMainMenu = (MainMenu)Tag;
+            viewMainMenu.Show();
+        }
         private void returnMainMenu_Click(object sender, EventArgs e)
         {
             MainMenu viewMainMenu = (MainMenu)Tag;
