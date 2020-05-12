@@ -1,15 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MegaDesk_Mendenhall
@@ -52,6 +44,9 @@ namespace MegaDesk_Mendenhall
                     break;
                 case "7 Days":
                     shippingBox.Tag = 7;
+                    break;
+                case "14 Days":
+                    shippingBox.Tag = 14;
                     break;
                 default:
                     shippingBox.Tag = 14;

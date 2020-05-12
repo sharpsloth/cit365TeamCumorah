@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MegaDesk_Mendenhall
 {
@@ -32,7 +28,7 @@ namespace MegaDesk_Mendenhall
         public int Depth { get { return depth; } set { depth = value; } }
         public int Drawers { get { return drawers; } set { drawers = value; } }
         //        public string Material { get { return material; } set { material = value; } }
-//        public DesktopMaterial Material; 
+        //        public DesktopMaterial Material; 
 
         public int Area { get { return area; } set { area = value; } }
 
@@ -52,7 +48,8 @@ namespace MegaDesk_Mendenhall
             if (this.width >= MIN_WIDTH && this.width <= MAX_WIDTH)
             {
                 return true;
-            } else { return false; }
+            }
+            else { return false; }
         }
 
         public bool CheckDepth()
@@ -60,7 +57,8 @@ namespace MegaDesk_Mendenhall
             if (this.depth >= MIN_DEPTH && this.depth <= MAX_DEPTH)
             {
                 return true;
-            } else { return false; }
+            }
+            else { return false; }
         }
 
         public int CalcArea()

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace MegaDesk_Mendenhall
 {
@@ -36,7 +32,7 @@ namespace MegaDesk_Mendenhall
         public string Today { get { return today; } set { today = value; } }
         public string DeliveryDate { get { return deliveryDate; } set { deliveryDate = value; } }
 
-        public DeskQuote(string name, int depth, int width, int drawers, 
+        public DeskQuote(string name, int depth, int width, int drawers,
             string material, int shipping)
         {
             this.name = name;
@@ -52,7 +48,7 @@ namespace MegaDesk_Mendenhall
             this.deliveryDate = delivery.ToString("d");
         }
 
-        public int GetBasePrice() {return BASE_PRICE;}
+        public int GetBasePrice() { return BASE_PRICE; }
         public int GetPricePerIn() { return PRICE_PER_INCH; }
         public int GetDrawerPrice() { return DRAWER_PRICE; }
         public int GetRushCost() { return rushCost; }
@@ -63,7 +59,7 @@ namespace MegaDesk_Mendenhall
             switch (material)
             {
                 case "Pine":
-                    cost= 50;
+                    cost = 50;
                     break;
                 case "Oak":
                     cost = 200;
@@ -81,6 +77,35 @@ namespace MegaDesk_Mendenhall
             return cost;
         }
 
+
+        // Clarisse Mendenhall (new for group project)
+        // create a 2d array from file to calculate rush cost
+        public const string RUSHPRICES = @"rushOrderPrices.txt";
+
+        public static int[,] GetRushPrices()
+        {
+            string[] lines = File.ReadAllLines(RUSHPRICES);
+
+            int[,] rushPrice = new int[3, 3];
+
+            try
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        rushPrice[i, j] = Int32.Parse(lines[(i * 3) + j]);
+                    }
+                }
+            }
+            catch (FileNotFoundException e)
+            {
+                // I don't know what to put here
+            }
+            return rushPrice;
+        }
+
+        // Clarisse Mendenhall - update this method to use 2d array
         public int CalcRushCost()
         {
             int cost = 0;
@@ -89,17 +114,17 @@ namespace MegaDesk_Mendenhall
             switch (shipDays)
             {
                 case 3:
-                    if (area < 1000){cost = 60; break;} 
-                    else if (area <= 2000){cost = 70; break;} 
-                    else {cost = 80; break;}
+                    if (area < 1000) { cost = GetRushPrices()[0, 0]; break; }
+                    else if (area <= 2000) { cost = GetRushPrices()[0, 1]; break; }
+                    else { cost = GetRushPrices()[0, 2]; break; }
                 case 5:
-                    if (area < 1000) { cost = 40; break; }
-                    else if (area <= 2000) { cost = 50; break; }
-                    else { cost = 60; break; }
+                    if (area < 1000) { cost = GetRushPrices()[1, 0]; break; }
+                    else if (area <= 2000) { cost = GetRushPrices()[1, 1]; break; }
+                    else { cost = GetRushPrices()[1, 2]; break; }
                 case 7:
-                    if (area < 1000) { cost = 30; break; }
-                    else if (area <= 2000) { cost = 35; break; }
-                    else { cost = 40; break; }
+                    if (area < 1000) { cost = GetRushPrices()[2, 0]; break; }
+                    else if (area <= 2000) { cost = GetRushPrices()[2, 1]; break; }
+                    else { cost = GetRushPrices()[2, 2]; break; }
                 case 14:
                     break;
             }
