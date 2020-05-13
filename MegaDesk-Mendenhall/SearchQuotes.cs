@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -26,6 +28,51 @@ namespace MegaDesk_Mendenhall
             MainMenu viewMainMenu = (MainMenu)Tag;
             viewMainMenu.Show();
             Close();
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string MaterialSelected = searchCombo.SelectedItem.ToString();
+
+            try
+            {
+                if (File.Exists(@"quotes.json"))
+                {
+                    using (StreamReader sr = new StreamReader(@"quotes.json"))
+                    {
+                        string jsonData = sr.ReadToEnd().Trim();
+
+                        string[] lines = jsonData.Split(
+                            new[] { "\r\n", "\r", "\n", "\\n" },
+                            StringSplitOptions.None
+                        );
+                        List<string[]> arrayList = new List<string[]>();
+                        string[] row;
+
+                        for (int i = 0; i < lines.Length; i++)
+                        {
+                            DeskQuoteRootObj DeskQuote = JsonConvert.DeserializeObject<DeskQuoteRootObj>(lines[i]);
+                            MessageBox.Show(lines[i]);
+                            Console.Write(lines[i]);
+
+                            row = new string[] { DeskQuote.Name, "Element 2", "Element 3", "Element 4", "Element 5" };
+                            arrayList.Add(row);
+                        }
+
+                        var source = new BindingSource();
+                        source.DataSource = arrayList;
+                        searchGrid.DataSource = source;
+
+
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

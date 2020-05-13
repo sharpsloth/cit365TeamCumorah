@@ -47,3 +47,4 @@ C:\Users\Clarisse\Source\Repos\sharpsloth\cit365TeamCumorah\MegaDesk-Mendenhall\
 C:\Users\Clarisse\Source\Repos\sharpsloth\cit365TeamCumorah\MegaDesk-Mendenhall\obj\Debug\MegaDesk-Mendenhall.exe
 C:\Users\Clarisse\Source\Repos\sharpsloth\cit365TeamCumorah\MegaDesk-Mendenhall\obj\Debug\MegaDesk-Mendenhall.pdb
 C:\Users\Clarisse\Source\Repos\sharpsloth\cit365TeamCumorah\MegaDesk-Mendenhall\bin\Debug\rushOrderPrices.txt
+C:\Users\Usuario\source\repos\cit365TeamCumorah\MegaDesk-Mendenhall\bin\Debug\rushOrderPrices.txt

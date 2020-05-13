@@ -12,40 +12,40 @@ namespace MegaDesk_Mendenhall
     }
     class Desk
     {
-        private int width;
-        private int depth;
-        private int drawers;
+//        private int width;
+//        private int depth;
+//        private int drawers;
         //      private string material;
         public DesktopMaterial material;
 
-        private int area;
+//        private int area;
         protected int MIN_WIDTH { get; set; } = 24;
         protected int MAX_WIDTH { get; set; } = 96;
         protected int MIN_DEPTH { get; set; } = 12;
         protected int MAX_DEPTH { get; set; } = 48;
 
-        public int Width { get { return width; } set { width = value; } }
-        public int Depth { get { return depth; } set { depth = value; } }
-        public int Drawers { get { return drawers; } set { drawers = value; } }
+        public int Width { get; set; }
+        public int Depth { get; set; }
+        public int Drawers { get; set; }
         //        public string Material { get { return material; } set { material = value; } }
         //        public DesktopMaterial Material; 
 
-        public int Area { get { return area; } set { area = value; } }
+        public int Area { get; set; }
 
         public Desk(int depth, int width, int drawers, string material)
         {
-            this.width = width;
-            this.depth = depth;
-            this.drawers = drawers;
+            this.Width = width;
+            this.Depth = depth;
+            this.Drawers = drawers;
             //            this.material = material;
             this.material = (DesktopMaterial)Enum.Parse(typeof(DesktopMaterial), material);
-            this.area = CalcArea();
+            this.Area = CalcArea();
 
         }
 
         public bool CheckWidth()
         {
-            if (this.width >= MIN_WIDTH && this.width <= MAX_WIDTH)
+            if (this.Width >= MIN_WIDTH && this.Width <= MAX_WIDTH)
             {
                 return true;
             }
@@ -54,7 +54,7 @@ namespace MegaDesk_Mendenhall
 
         public bool CheckDepth()
         {
-            if (this.depth >= MIN_DEPTH && this.depth <= MAX_DEPTH)
+            if (this.Depth >= MIN_DEPTH && this.Depth <= MAX_DEPTH)
             {
                 return true;
             }
@@ -63,7 +63,7 @@ namespace MegaDesk_Mendenhall
 
         public int CalcArea()
         {
-            int area = this.width * this.depth;
+            int area = this.Width * this.Depth;
             return area;
         }
     }

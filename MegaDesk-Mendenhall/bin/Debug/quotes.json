@@ -1,4 +1,4 @@
-{"Name":"Jose COncha","Desk":{"material":0,"Width":26,"Depth":25,"Drawers":1,"Area":650},"RushDays":5,"MaterialCost":200,"DrawerCost":50,"RushCost":40,"SizeCost":0,"Quote":490,"Today":"11-05-2020","DeliveryDate":"16-05-2020"}
+{"Name":"Jose COncha","Desk":{"material":"Oak","Width":26,"Depth":25,"Drawers":1,"Area":650},"RushDays":5,"MaterialCost":200,"DrawerCost":50,"RushCost":40,"SizeCost":0,"Quote":490,"Today":"11-05-2020","DeliveryDate":"16-05-2020"}
 {"Name":"Clarisse","Desk":{"material":1,"Width":48,"Depth":24,"Drawers":4,"Area":1152},"RushDays":5,"MaterialCost":100,"DrawerCost":200,"RushCost":50,"SizeCost":152,"Quote":702,"Today":"5/11/2020","DeliveryDate":"5/16/2020"}
 {"Name":"sam","Desk":{"material":3,"Width":72,"Depth":36,"Drawers":7,"Area":2592},"RushDays":3,"MaterialCost":300,"DrawerCost":350,"RushCost":80,"SizeCost":1592,"Quote":2522,"Today":"5/11/2020","DeliveryDate":"5/14/2020"}
 {"Name":"Cloe","Desk":{"material":2,"Width":24,"Depth":12,"Drawers":0,"Area":288},"RushDays":14,"MaterialCost":50,"DrawerCost":0,"RushCost":0,"SizeCost":0,"Quote":250,"Today":"5/11/2020","DeliveryDate":"5/25/2020"}
@@ -7,3 +7,5 @@
 {"Name":"Clarisse","Desk":{"material":3,"Width":36,"Depth":36,"Drawers":3,"Area":1296},"RushDays":14,"MaterialCost":300,"DrawerCost":150,"RushCost":0,"SizeCost":296,"Quote":946,"Today":"5/11/2020","DeliveryDate":"5/25/2020"}
 {"Name":"Claire","Desk":{"material":2,"Width":36,"Depth":36,"Drawers":7,"Area":1296},"RushDays":7,"MaterialCost":50,"DrawerCost":350,"RushCost":35,"SizeCost":296,"Quote":931,"Today":"5/12/2020","DeliveryDate":"5/19/2020"}
 {"Name":"Clarisse","Desk":{"material":2,"Width":24,"Depth":24,"Drawers":0,"Area":576},"RushDays":3,"MaterialCost":50,"DrawerCost":0,"RushCost":60,"SizeCost":0,"Quote":310,"Today":"5/12/2020","DeliveryDate":"5/15/2020"}
+{"Name":"Jose","Desk":{"material":2,"Width":25,"Depth":25,"Drawers":1,"Area":625},"RushDays":14,"MaterialCost":50,"DrawerCost":50,"RushCost":0,"SizeCost":0,"Quote":300,"Today":"13-05-2020","DeliveryDate":"27-05-2020"}
+{"Name":"Jose","Desk":{"material":2,"Width":25,"Depth":25,"Drawers":2,"Area":625},"RushDays":14,"MaterialCost":50,"DrawerCost":100,"RushCost":0,"SizeCost":0,"Quote":350,"Today":"13-05-2020","DeliveryDate":"27-05-2020"}

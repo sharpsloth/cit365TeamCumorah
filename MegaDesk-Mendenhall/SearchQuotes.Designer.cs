@@ -31,6 +31,8 @@
             this.returnMainMenu = new System.Windows.Forms.Button();
             this.searchCombo = new System.Windows.Forms.ComboBox();
             this.searchBtn = new System.Windows.Forms.Button();
+            this.searchGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.searchGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // returnMainMenu
@@ -64,17 +66,28 @@
             this.searchBtn.TabIndex = 13;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
+            // searchGrid
+            // 
+            this.searchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchGrid.Location = new System.Drawing.Point(13, 69);
+            this.searchGrid.Name = "searchGrid";
+            this.searchGrid.Size = new System.Drawing.Size(775, 288);
+            this.searchGrid.TabIndex = 14;
             // 
             // SearchQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.searchGrid);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.searchCombo);
             this.Controls.Add(this.returnMainMenu);
             this.Name = "SearchQuotes";
             this.Text = "SearchQuotes";
+            ((System.ComponentModel.ISupportInitialize)(this.searchGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,5 +97,6 @@
         private System.Windows.Forms.Button returnMainMenu;
         private System.Windows.Forms.ComboBox searchCombo;
         private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.DataGridView searchGrid;
     }
 }
