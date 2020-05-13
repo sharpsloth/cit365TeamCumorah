@@ -46,17 +46,14 @@ namespace MegaDesk_Mendenhall
                             new[] { "\r\n", "\r", "\n", "\\n" },
                             StringSplitOptions.None
                         );
-                        List<string[]> arrayList = new List<string[]>();
-                        string[] row;
+                        List<DeskQuoteRootObj> arrayList = new List<DeskQuoteRootObj>();
+                        //string[] row;
 
                         for (int i = 0; i < lines.Length; i++)
                         {
                             DeskQuoteRootObj DeskQuote = JsonConvert.DeserializeObject<DeskQuoteRootObj>(lines[i]);
-                            MessageBox.Show(lines[i]);
-                            Console.Write(lines[i]);
-
-                            row = new string[] { DeskQuote.Name, "Element 2", "Element 3", "Element 4", "Element 5" };
-                            arrayList.Add(row);
+                            //row = new string[] { DeskQuote.Name, "Element 2", "Element 3", "Element 4", "Element 5" };
+                            arrayList.Add(DeskQuote);
                         }
 
                         var source = new BindingSource();
