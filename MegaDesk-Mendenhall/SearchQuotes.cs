@@ -1,10 +1,32 @@
-﻿using Newtonsoft.Json;
+﻿using MegaDesk_Mendenhall;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+
+public struct Row {
+    public string Date { get; set; }
+    public string CustomerName { get; set; }
+    public int Width { get; set; }
+    public int Depth { get; set; }
+    public DesktopMaterial Material { get; set; }
+    public int RushDays { get; set; }
+    public int Price { get; set; }
+
+    public Row(string date, string customerName, int width, int depth, DesktopMaterial material, int rushDays, int price)
+    {
+        Date = date;
+        CustomerName = customerName;
+        Width = width;
+        Depth = depth;
+        Material = material;
+        RushDays = rushDays;
+        Price = price;
+    }
+}
 
 namespace MegaDesk_Mendenhall
 {
@@ -46,21 +68,22 @@ namespace MegaDesk_Mendenhall
                             new[] { "\r\n", "\r", "\n", "\\n" },
                             StringSplitOptions.None
                         );
-                        List<DeskQuoteRootObj> arrayList = new List<DeskQuoteRootObj>();
-                        //string[] row;
+                        List<Row> arrayList = new List<Row>();
 
                         for (int i = 0; i < lines.Length; i++)
                         {
+                            // Read lines and parse Objects
                             DeskQuoteRootObj DeskQuote = JsonConvert.DeserializeObject<DeskQuoteRootObj>(lines[i]);
-                            //row = new string[] { DeskQuote.Name, "Element 2", "Element 3", "Element 4", "Element 5" };
-                            arrayList.Add(DeskQuote);
+                            Row row = new Row(DeskQuote.Today, DeskQuote.Name, DeskQuote.Desk.Width, DeskQuote.Desk.Depth, 
+                                DeskQuote.Desk.material, DeskQuote.RushDays, DeskQuote.Quote);
+                            arrayList.Add(row);
                         }
-
+                        // Obtener el material Seleccionado
+                        DesktopMaterial selMaterial = (DesktopMaterial)Enum.Parse(typeof(DesktopMaterial), searchCombo.Text);
+                        // Attach data to grid
                         var source = new BindingSource();
-                        source.DataSource = arrayList;
+                        source.DataSource = arrayList.FindAll(line => line.Material == selMaterial);
                         searchGrid.DataSource = source;
-
-
 
                     }
                 }
