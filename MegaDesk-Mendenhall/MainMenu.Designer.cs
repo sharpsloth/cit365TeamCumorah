@@ -102,7 +102,7 @@
             this.Controls.Add(this.searchQuotes);
             this.Controls.Add(this.exitBttn);
             this.Controls.Add(this.newQuote);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

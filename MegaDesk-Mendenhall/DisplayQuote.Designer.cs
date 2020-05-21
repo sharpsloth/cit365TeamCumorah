@@ -87,7 +87,7 @@
             // 
             this.drawerSelection.BackColor = System.Drawing.Color.WhiteSmoke;
             this.drawerSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerSelection.Location = new System.Drawing.Point(323, 258);
+            this.drawerSelection.Location = new System.Drawing.Point(433, 258);
             this.drawerSelection.Name = "drawerSelection";
             this.drawerSelection.Size = new System.Drawing.Size(75, 22);
             this.drawerSelection.TabIndex = 20;
@@ -132,7 +132,7 @@
             this.displayTable.Controls.Add(this.todaysDateLabel, 0, 2);
             this.displayTable.Controls.Add(this.todaysDate, 1, 2);
             this.displayTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayTable.Location = new System.Drawing.Point(62, 82);
+            this.displayTable.Location = new System.Drawing.Point(172, 82);
             this.displayTable.Name = "displayTable";
             this.displayTable.RowCount = 22;
             this.displayTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -506,7 +506,7 @@
             this.Controls.Add(this.displayTable);
             this.Controls.Add(this.drawerSelection);
             this.Controls.Add(this.returnMainMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

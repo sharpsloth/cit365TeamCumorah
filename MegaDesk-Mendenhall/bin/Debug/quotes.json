@@ -11,3 +11,4 @@
 {"Name":"Jose","Desk":{"material":2,"Width":25,"Depth":25,"Drawers":2,"Area":625},"RushDays":14,"MaterialCost":50,"DrawerCost":100,"RushCost":0,"SizeCost":0,"Quote":350,"Today":"13-05-2020","DeliveryDate":"27-05-2020"}
 {"Name":"Jebb Blarb","Desk":{"material":2,"Width":33,"Depth":45,"Drawers":2,"Area":1485},"RushDays":14,"MaterialCost":50,"DrawerCost":100,"RushCost":0,"SizeCost":485,"Quote":835,"Today":"5/20/2020","DeliveryDate":"6/3/2020"}
 {"Name":"Stan Durthley","Desk":{"material":4,"Width":33,"Depth":33,"Drawers":2,"Area":1089},"RushDays":3,"MaterialCost":125,"DrawerCost":100,"RushCost":70,"SizeCost":89,"Quote":584,"Today":"5/20/2020","DeliveryDate":"5/23/2020"}
+{"Name":"Frank Drizzle","Desk":{"material":3,"Width":33,"Depth":33,"Drawers":1,"Area":1089},"RushDays":3,"MaterialCost":300,"DrawerCost":50,"RushCost":70,"SizeCost":89,"Quote":709,"Today":"5/20/2020","DeliveryDate":"5/23/2020"}
