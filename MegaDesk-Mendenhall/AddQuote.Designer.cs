@@ -163,7 +163,7 @@ namespace MegaDesk_Mendenhall
             // 
             // drawerSelection
             // 
-            this.drawerSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawerSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drawerSelection.Location = new System.Drawing.Point(246, 191);
             this.drawerSelection.Maximum = new decimal(new int[] {
             7,
@@ -177,7 +177,7 @@ namespace MegaDesk_Mendenhall
             // 
             // materialSelection
             // 
-            this.materialSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialSelection.Location = new System.Drawing.Point(246, 222);
             this.materialSelection.Name = "materialSelection";
             this.materialSelection.Size = new System.Drawing.Size(100, 22);
@@ -212,7 +212,7 @@ namespace MegaDesk_Mendenhall
             // 
             // shippingBox
             // 
-            this.shippingBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shippingBox.Items.Add("3 Days");
             this.shippingBox.Items.Add("5 Days");
             this.shippingBox.Items.Add("7 Days");
