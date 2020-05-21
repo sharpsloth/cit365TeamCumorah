@@ -103,6 +103,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SearchQuotes.resx">
       <DependentUpon>SearchQuotes.cs</DependentUpon>
@@ -125,6 +126,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Pictures\light-bulb-1246043_1920.jpg" />
+    <None Include="Pictures\Logo.ico" />
+    <None Include="Pictures\light-bulb-1246043_1920%281%29.jpg" />
+    <None Include="Pictures\macbook-336704_1920%281%29.jpg" />
     <Content Include="rushOrderPrices.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
