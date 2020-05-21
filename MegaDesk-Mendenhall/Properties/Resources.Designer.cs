@@ -93,9 +93,29 @@ namespace MegaDesk_Mendenhall.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap macbook_336704_1920 {
+            get {
+                object obj = ResourceManager.GetObject("macbook-336704_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap macbook_336704_1920_1_ {
             get {
                 object obj = ResourceManager.GetObject("macbook-336704_1920(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notebook_1280538_1920 {
+            get {
+                object obj = ResourceManager.GetObject("notebook-1280538_1920", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

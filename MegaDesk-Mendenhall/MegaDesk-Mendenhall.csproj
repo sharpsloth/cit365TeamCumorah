@@ -130,6 +130,8 @@
     <None Include="Pictures\Logo.ico" />
     <None Include="Pictures\light-bulb-1246043_1920%281%29.jpg" />
     <None Include="Pictures\macbook-336704_1920%281%29.jpg" />
+    <None Include="Pictures\macbook-336704_1920.jpg" />
+    <None Include="Pictures\notebook-1280538_1920.jpg" />
     <Content Include="rushOrderPrices.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

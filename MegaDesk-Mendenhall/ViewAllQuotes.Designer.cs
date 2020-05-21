@@ -36,7 +36,7 @@
             this.returnMainMenu.BackColor = System.Drawing.Color.White;
             this.returnMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.returnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnMainMenu.Font = new System.Drawing.Font("Roboto Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnMainMenu.Location = new System.Drawing.Point(286, 385);
             this.returnMainMenu.Margin = new System.Windows.Forms.Padding(20, 20, 20, 35);
             this.returnMainMenu.Name = "returnMainMenu";
@@ -50,9 +50,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MegaDesk_Mendenhall.Properties.Resources.macbook_336704_1920_1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.returnMainMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewAllQuotes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewAllQuotes";
             this.ResumeLayout(false);
 

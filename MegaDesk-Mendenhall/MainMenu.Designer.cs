@@ -39,7 +39,7 @@
             // 
             this.newQuote.BackColor = System.Drawing.Color.White;
             this.newQuote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newQuote.Location = new System.Drawing.Point(34, 444);
             this.newQuote.Margin = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.newQuote.Name = "newQuote";
@@ -53,7 +53,7 @@
             // 
             this.exitBttn.BackColor = System.Drawing.Color.White;
             this.exitBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBttn.Location = new System.Drawing.Point(823, 444);
             this.exitBttn.Margin = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.exitBttn.Name = "exitBttn";
@@ -67,7 +67,7 @@
             // 
             this.searchQuotes.BackColor = System.Drawing.Color.White;
             this.searchQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchQuotes.Location = new System.Drawing.Point(561, 444);
             this.searchQuotes.Margin = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.searchQuotes.Name = "searchQuotes";
@@ -81,7 +81,7 @@
             // 
             this.viewQuotes.BackColor = System.Drawing.Color.White;
             this.viewQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewQuotes.Location = new System.Drawing.Point(293, 444);
             this.viewQuotes.Margin = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.viewQuotes.Name = "viewQuotes";
@@ -107,6 +107,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);

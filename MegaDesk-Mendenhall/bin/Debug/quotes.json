@@ -9,3 +9,4 @@
 {"Name":"Clarisse","Desk":{"material":2,"Width":24,"Depth":24,"Drawers":0,"Area":576},"RushDays":3,"MaterialCost":50,"DrawerCost":0,"RushCost":60,"SizeCost":0,"Quote":310,"Today":"5/12/2020","DeliveryDate":"5/15/2020"}
 {"Name":"Jose","Desk":{"material":2,"Width":25,"Depth":25,"Drawers":1,"Area":625},"RushDays":14,"MaterialCost":50,"DrawerCost":50,"RushCost":0,"SizeCost":0,"Quote":300,"Today":"13-05-2020","DeliveryDate":"27-05-2020"}
 {"Name":"Jose","Desk":{"material":2,"Width":25,"Depth":25,"Drawers":2,"Area":625},"RushDays":14,"MaterialCost":50,"DrawerCost":100,"RushCost":0,"SizeCost":0,"Quote":350,"Today":"13-05-2020","DeliveryDate":"27-05-2020"}
+{"Name":"Jebb Blarb","Desk":{"material":2,"Width":33,"Depth":45,"Drawers":2,"Area":1485},"RushDays":14,"MaterialCost":50,"DrawerCost":100,"RushCost":0,"SizeCost":485,"Quote":835,"Today":"5/20/2020","DeliveryDate":"6/3/2020"}

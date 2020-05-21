@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchQuotes));
             this.returnMainMenu = new System.Windows.Forms.Button();
             this.searchCombo = new System.Windows.Forms.ComboBox();
             this.searchBtn = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.returnMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.returnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnMainMenu.Location = new System.Drawing.Point(281, 395);
+            this.returnMainMenu.Location = new System.Drawing.Point(286, 406);
             this.returnMainMenu.Margin = new System.Windows.Forms.Padding(20, 20, 20, 35);
             this.returnMainMenu.Name = "returnMainMenu";
             this.returnMainMenu.Size = new System.Drawing.Size(200, 30);
@@ -52,17 +53,19 @@
             // 
             // searchCombo
             // 
+            this.searchCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchCombo.FormattingEnabled = true;
-            this.searchCombo.Location = new System.Drawing.Point(13, 13);
+            this.searchCombo.Location = new System.Drawing.Point(433, 55);
             this.searchCombo.Name = "searchCombo";
-            this.searchCombo.Size = new System.Drawing.Size(121, 21);
+            this.searchCombo.Size = new System.Drawing.Size(119, 21);
             this.searchCombo.TabIndex = 12;
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(149, 12);
+            this.searchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.Location = new System.Drawing.Point(558, 48);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(75, 23);
+            this.searchBtn.Size = new System.Drawing.Size(84, 32);
             this.searchBtn.TabIndex = 13;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
@@ -70,8 +73,9 @@
             // 
             // searchGrid
             // 
+            this.searchGrid.BackgroundColor = System.Drawing.Color.LightGray;
             this.searchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.searchGrid.Location = new System.Drawing.Point(13, 69);
+            this.searchGrid.Location = new System.Drawing.Point(13, 104);
             this.searchGrid.Name = "searchGrid";
             this.searchGrid.Size = new System.Drawing.Size(775, 288);
             this.searchGrid.TabIndex = 14;
@@ -80,12 +84,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MegaDesk_Mendenhall.Properties.Resources.macbook_336704_1920_1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.searchGrid);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.searchCombo);
             this.Controls.Add(this.returnMainMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SearchQuotes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchQuotes";
             ((System.ComponentModel.ISupportInitialize)(this.searchGrid)).EndInit();
             this.ResumeLayout(false);
