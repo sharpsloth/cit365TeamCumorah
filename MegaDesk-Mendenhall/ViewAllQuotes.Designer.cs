@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllQuotes));
             this.returnMainMenu = new System.Windows.Forms.Button();
             this.dataGridViewAll = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).BeginInit();
@@ -38,7 +39,7 @@
             this.returnMainMenu.BackColor = System.Drawing.Color.White;
             this.returnMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.returnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnMainMenu.Location = new System.Drawing.Point(281, 395);
             this.returnMainMenu.Margin = new System.Windows.Forms.Padding(20, 20, 20, 35);
             this.returnMainMenu.Name = "returnMainMenu";
@@ -50,6 +51,7 @@
             // 
             // dataGridViewAll
             // 
+            this.dataGridViewAll.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAll.Location = new System.Drawing.Point(13, 13);
             this.dataGridViewAll.Name = "dataGridViewAll";
@@ -60,10 +62,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MegaDesk_Mendenhall.Properties.Resources.macbook_336704_1920_1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridViewAll);
             this.Controls.Add(this.returnMainMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewAllQuotes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewAllQuotes";
             this.Load += new System.EventHandler(this.ViewAllQuotes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).EndInit();
