@@ -39,7 +39,7 @@
             this.returnMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.returnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnMainMenu.Location = new System.Drawing.Point(281, 395);
+            this.returnMainMenu.Location = new System.Drawing.Point(299, 395);
             this.returnMainMenu.Margin = new System.Windows.Forms.Padding(20, 20, 20, 35);
             this.returnMainMenu.Name = "returnMainMenu";
             this.returnMainMenu.Size = new System.Drawing.Size(200, 30);
@@ -51,9 +51,9 @@
             // dataGridViewAll
             // 
             this.dataGridViewAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAll.Location = new System.Drawing.Point(13, 13);
+            this.dataGridViewAll.Location = new System.Drawing.Point(28, 31);
             this.dataGridViewAll.Name = "dataGridViewAll";
-            this.dataGridViewAll.Size = new System.Drawing.Size(775, 359);
+            this.dataGridViewAll.Size = new System.Drawing.Size(748, 341);
             this.dataGridViewAll.TabIndex = 13;
             // 
             // ViewAllQuotes
