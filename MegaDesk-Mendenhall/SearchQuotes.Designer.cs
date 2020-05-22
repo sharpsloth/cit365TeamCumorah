@@ -41,7 +41,7 @@
             this.returnMainMenu.BackColor = System.Drawing.Color.White;
             this.returnMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.returnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnMainMenu.Location = new System.Drawing.Point(286, 406);
             this.returnMainMenu.Margin = new System.Windows.Forms.Padding(20, 20, 20, 35);
             this.returnMainMenu.Name = "returnMainMenu";

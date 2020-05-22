@@ -10,3 +10,6 @@
 {"Name":"Jose","Desk":{"material":2,"Width":25,"Depth":25,"Drawers":1,"Area":625},"RushDays":14,"MaterialCost":50,"DrawerCost":50,"RushCost":0,"SizeCost":0,"Quote":300,"Today":"13-05-2020","DeliveryDate":"27-05-2020"}
 {"Name":"Jose","Desk":{"material":2,"Width":25,"Depth":25,"Drawers":2,"Area":625},"RushDays":14,"MaterialCost":50,"DrawerCost":100,"RushCost":0,"SizeCost":0,"Quote":350,"Today":"13-05-2020","DeliveryDate":"27-05-2020"}
 {"Name":"Lai","Desk":{"material":4,"Width":48,"Depth":30,"Drawers":5,"Area":1440},"RushDays":3,"MaterialCost":125,"DrawerCost":250,"RushCost":70,"SizeCost":440,"Quote":1085,"Today":"5/19/2020","DeliveryDate":"5/22/2020"}
+{"Name":"Jorbe Delth","Desk":{"material":3,"Width":33,"Depth":45,"Drawers":2,"Area":1485},"RushDays":3,"MaterialCost":300,"DrawerCost":100,"RushCost":70,"SizeCost":485,"Quote":1155,"Today":"5/22/2020","DeliveryDate":"5/25/2020"}
+{"Name":"Jeremiah Price","Desk":{"material":2,"Width":96,"Depth":48,"Drawers":5,"Area":4608},"RushDays":3,"MaterialCost":50,"DrawerCost":250,"RushCost":80,"SizeCost":3608,"Quote":4188,"Today":"5/22/2020","DeliveryDate":"5/25/2020"}
+{"Name":"Jeblis Franch","Desk":{"material":1,"Width":78,"Depth":34,"Drawers":7,"Area":2652},"RushDays":3,"MaterialCost":100,"DrawerCost":350,"RushCost":80,"SizeCost":1652,"Quote":2382,"Today":"5/22/2020","DeliveryDate":"5/25/2020"}
