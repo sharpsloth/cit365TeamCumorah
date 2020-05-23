@@ -101,7 +101,7 @@ namespace MegaDesk_Mendenhall
             }
             catch (FileNotFoundException e)
             {
-                // I don't know what to put here
+                Console.WriteLine("Exception caught: {0}", e);
             }
             return rushPrice;
         }
