@@ -6,6 +6,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 public struct AllRow
 {
@@ -74,7 +75,23 @@ namespace MegaDesk_Mendenhall
                                 DeskQuote.Desk.material, DeskQuote.RushDays, DeskQuote.Quote);
                             arrayList.Add(row);
                         }
-                        dataGridViewAll.DataSource = arrayList;
+
+                        //Fill a new data table for sorting
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add("Date");
+                        dt.Columns.Add("CustomerName");
+                        dt.Columns.Add("Width");
+                        dt.Columns.Add("Depth");
+                        dt.Columns.Add("Material");
+                        dt.Columns.Add("RushDays");
+                        dt.Columns.Add("Price");
+                        foreach (var item in arrayList)
+                        {
+                            dt.Rows.Add(item.Date, item.CustomerName, item.Width, item.Depth, item.Material, item.RushDays, item.Price);
+                        }
+                        dataGridViewAll.DataSource = dt;
+
+                        //dataGridViewAll.DataSource = arrayList;
                     }
                 }
 
@@ -83,6 +100,26 @@ namespace MegaDesk_Mendenhall
             {
                 throw;
             }
+        }
+
+        private void sortDateBtn_Click(object sender, EventArgs e)
+        {
+            dataGridViewAll.Sort(dataGridViewAll.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void sortCustomerNameBtn_Click(object sender, EventArgs e)
+        {
+            dataGridViewAll.Sort(dataGridViewAll.Columns[1], ListSortDirection.Ascending);
+        }
+
+        private void sortMaterialBtn_Click(object sender, EventArgs e)
+        {
+            dataGridViewAll.Sort(dataGridViewAll.Columns[4], ListSortDirection.Ascending);
+        }
+
+        private void sortRushDaysBtn_Click(object sender, EventArgs e)
+        {
+            dataGridViewAll.Sort(dataGridViewAll.Columns[5], ListSortDirection.Ascending);
         }
     }
 
