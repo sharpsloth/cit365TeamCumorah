@@ -17,15 +17,21 @@ namespace RazorMegaDesk.Models
     public class DeskQuote
     {
         public int ID { get; set; }
+        [Display(Name = "Shipping Speed")]
         public int RushDays { get; set; }
+        [Display(Name = "Customer Name")]
         public string CustomerName { get; set; }
         [DataType(DataType.Date)]
+        [Display(Name = "Date of Quote")]
         public DateTime QuoteDate { get; set; }
+        [Display(Name = "Desk Width")]
         public int DeskWidth { get; set; }
+        [Display(Name = "Desk Depth")]
         public int DeskDepth { get; set; }
-//        public DesktopMaterial DeskMaterial { get; set; }
         [EnumDataType(typeof(DesktopMaterial))]
+        [Display(Name = "Desktop Material")]
         public DesktopMaterial DeskMaterial { get; set; }
+        [Display(Name = "Number of Dawers")]
         public int DeskDrawers { get; set; }
 
         private int DRAWER_PRICE = 50;
@@ -37,7 +43,8 @@ namespace RazorMegaDesk.Models
         private int MIN_DEPTH { get; set; } = 12;
         private int MAX_DEPTH { get; set; } = 48;
 
-        public int GetArea() {
+        public int GetArea()
+        {
             int area = this.DeskDepth * this.DeskWidth;
             return area;
         }

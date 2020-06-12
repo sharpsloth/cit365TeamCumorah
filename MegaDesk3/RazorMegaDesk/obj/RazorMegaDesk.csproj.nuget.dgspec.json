@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jerem\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj": {}
+    "C:\\Users\\Clarisse\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jerem\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj": {
+    "C:\\Users\\Clarisse\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jerem\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj",
+        "projectUniqueName": "C:\\Users\\Clarisse\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj",
         "projectName": "RazorMegaDesk",
-        "projectPath": "C:\\Users\\Jerem\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj",
-        "packagesPath": "C:\\Users\\Jerem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jerem\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\obj\\",
+        "projectPath": "C:\\Users\\Clarisse\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj",
+        "packagesPath": "C:\\Users\\Clarisse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Clarisse\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Clarisse\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
