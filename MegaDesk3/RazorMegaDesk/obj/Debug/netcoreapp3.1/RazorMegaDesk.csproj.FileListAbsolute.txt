@@ -511,3 +511,5 @@ C:\Users\Jerem\Source\Repos\sharpsloth\cit365TeamCumorah\MegaDesk3\RazorMegaDesk
 C:\Users\Jerem\Source\Repos\sharpsloth\cit365TeamCumorah\MegaDesk3\RazorMegaDesk\obj\Debug\netcoreapp3.1\RazorMegaDesk.dll
 C:\Users\Jerem\Source\Repos\sharpsloth\cit365TeamCumorah\MegaDesk3\RazorMegaDesk\obj\Debug\netcoreapp3.1\RazorMegaDesk.pdb
 C:\Users\Jerem\Source\Repos\sharpsloth\cit365TeamCumorah\MegaDesk3\RazorMegaDesk\obj\Debug\netcoreapp3.1\RazorMegaDesk.genruntimeconfig.cache
+I:\Github\MegaDeskV3\MegaDesk3\RazorMegaDesk\obj\Debug\netcoreapp3.1\RazorMegaDesk.dll
+I:\Github\MegaDeskV3\MegaDesk3\RazorMegaDesk\obj\Debug\netcoreapp3.1\RazorMegaDesk.pdb
