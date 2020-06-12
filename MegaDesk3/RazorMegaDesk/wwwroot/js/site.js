@@ -10,3 +10,26 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+function onChangeDesktopMaterial() {
+    var selectedMaterialElement = document.getElementById("desktopMaterialSelect");
+    var selectedMaterial = selectedMaterialElement.options[selectedMaterialElement.selectedIndex].text;
+    // console.log(selectedMaterial)
+    switch (selectedMaterial) {
+        case "Oak":
+            document.getElementById("dynamic-image").src = "/images/oak.jpg";
+            break;
+        case "Laminate":
+            document.getElementById("dynamic-image").src = "/images/laminate.jpg";
+            break;
+        case "Pine":
+            document.getElementById("dynamic-image").src = "/images/pine.jpg";
+            break;
+        case "Rosewood":
+            document.getElementById("dynamic-image").src = "/images/rosewood.jpg";
+            break;
+        case "Veneer":
+            document.getElementById("dynamic-image").src = "/images/veneer.jpg";
+            break;
+    }
+}

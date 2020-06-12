@@ -40,9 +40,13 @@
                 <span asp-validation-for="DeskQuote.DeskDepth" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DeskQuote.DeskMaterial" class="control-label"></label>
-                <select asp-for="DeskQuote.DeskMaterial" class="form-control"></select>
-                <span asp-validation-for="DeskQuote.DeskMaterial" class="text-danger"></span>
+                @{string image = Enum.GetName(typeof(RazorMegaDesk.Models.DesktopMaterial), Model.DeskQuote.DeskMaterial);}
+                    <img src="/images/@(image).jpg" alt="Sample Image" width="300px" id="dynamic-image" />
+                    <br />
+                    <label asp-for="DeskQuote.DeskMaterial" class="control-label"></label>
+                    <select asp-for="DeskQuote.DeskMaterial" class="form-control" id="desktopMaterialSelect" 
+                            onchange="onChangeDesktopMaterial()" asp-items="Html.GetEnumSelectList<RazorMegaDesk.Models.DesktopMaterial>()"></select>
+                    <span asp-validation-for="DeskQuote.DeskMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.DeskDrawers" class="control-label"></label>
