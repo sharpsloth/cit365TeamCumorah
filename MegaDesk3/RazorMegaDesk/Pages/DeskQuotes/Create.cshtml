@@ -52,16 +52,20 @@
                 <span asp-validation-for="DeskQuote.DeskDrawers" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                            <label asp-for="DeskQuote.Price" class="control-label"></label>
+                            <input asp-for="DeskQuote.Price" class="form-control" />
+                            <span asp-validation-for="DeskQuote.Price" class="text-danger"></span>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-</div>
+        </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
+        <div>
+            <a asp-page="Index">Back to List</a>
+        </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
