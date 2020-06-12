@@ -6,31 +6,38 @@
     <title>@ViewData["Title"] - RazorMegaDesk</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.10.2/css/all.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">RazorMegaDesk</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/DeskQuotes/Index">Desk Quotes!</a>
-                        </li>
-                    </ul>
-                </div>
+                <a class="navbar-brand" asp-page="/DeskQuotes/Index">Mega Desk Quotes</a>
+                <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                    </li>
+                </ul>
+            </div> -->
+                <span style="font-size:18px;cursor:pointer" onclick="openNav()">Menu 
+                <span style="font-size:26px">&#9776;</span>
+                </span>
             </div>
         </nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/DeskQuotes/Create">Create Quote</a>
+            <a href="/DeskQuotes">View Quotes</a>
+            <!--            <a href="#">Clients</a>
+                <a href="#">Contact</a>
+    -->
+        </div>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
