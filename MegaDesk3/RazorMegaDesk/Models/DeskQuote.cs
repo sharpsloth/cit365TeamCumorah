@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RazorMegaDesk.Models
 {
@@ -33,6 +34,12 @@ namespace RazorMegaDesk.Models
         public DesktopMaterial DeskMaterial { get; set; }
         [Display(Name = "Number of Dawers")]
         public int DeskDrawers { get; set; }
+
+        [Display(Name = "Price")]
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "decimal(18, 2)")]
+        [Required]
+        public decimal Price { get; set; }
 
         private int DRAWER_PRICE = 50;
         private int BASE_PRICE = 200;
