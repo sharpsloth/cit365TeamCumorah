@@ -47,6 +47,9 @@ namespace RazorMegaDesk.Migrations
                     b.Property<int>("RushDays")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("Price")
+                     .HasColumnType("decimal(18, 2)");
+
                     b.HasKey("ID");
 
                     b.ToTable("DeskQuote");

@@ -8589,25 +8589,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Edwin\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Jerem\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\Github\\MegaDeskV3\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj",
+      "projectUniqueName": "C:\\Users\\Jerem\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj",
       "projectName": "RazorMegaDesk",
-      "projectPath": "I:\\Github\\MegaDeskV3\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj",
-      "packagesPath": "C:\\Users\\Edwin\\.nuget\\packages\\",
-      "outputPath": "I:\\Github\\MegaDeskV3\\MegaDesk3\\RazorMegaDesk\\obj\\",
+      "projectPath": "C:\\Users\\Jerem\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\RazorMegaDesk.csproj",
+      "packagesPath": "C:\\Users\\Jerem\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jerem\\Source\\Repos\\sharpsloth\\cit365TeamCumorah\\MegaDesk3\\RazorMegaDesk\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Edwin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Jerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8667,7 +8666,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
