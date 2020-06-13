@@ -41,19 +41,20 @@ namespace RazorMegaDesk.Models
         [Required]
         public decimal Price { get; set; }
 
-        private int DRAWER_PRICE = 50;
-        private int BASE_PRICE = 200;
-        private int PRICE_PER_INCH = 1;
-        private int INCLUDED_INCHES = 1000;
-        private int MIN_WIDTH { get; set; } = 24;
-        private int MAX_WIDTH { get; set; } = 96;
-        private int MIN_DEPTH { get; set; } = 12;
-        private int MAX_DEPTH { get; set; } = 48;
+        public Desk Desk { get; set; }
 
-        public int GetArea()
+        private const decimal BASE_DESK_PRICE = 200.00M;
+        private const decimal SURFACE_AREA_RATE = 1;
+        private const decimal DRAWER_RATE = 50.00M;
+
+        private decimal GetDeskPrice(decimal surfaceArea)
         {
-            int area = this.DeskDepth * this.DeskWidth;
-            return area;
+            decimal deskPrice = BASE_DESK_PRICE +
+                                surfaceArea * SURFACE_AREA_RATE +
+                                Desk.NumberOfDrawers * DRAWER_RATE +
+                                Desk.SurfaceMaterial.Price;
+
+            return deskPrice;
         }
 
     }
