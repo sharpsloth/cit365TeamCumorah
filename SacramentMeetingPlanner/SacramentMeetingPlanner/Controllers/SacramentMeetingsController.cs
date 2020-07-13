@@ -22,7 +22,10 @@ namespace SacramentMeetingPlanner.Controllers
         // GET: SacramentMeetings
         public async Task<IActionResult> Index()
         {
-            return View(await _context.SacramentMeeting.ToListAsync());
+            var sacrament = _context.SacramentMeeting
+                .Include(s => s.Speakers)
+                .AsNoTracking();
+            return View(await sacrament.ToListAsync());
         }
 
         // GET: SacramentMeetings/Details/5
@@ -34,6 +37,8 @@ namespace SacramentMeetingPlanner.Controllers
             }
 
             var sacramentMeeting = await _context.SacramentMeeting
+                .Include(s => s.Speakers)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (sacramentMeeting == null)
             {

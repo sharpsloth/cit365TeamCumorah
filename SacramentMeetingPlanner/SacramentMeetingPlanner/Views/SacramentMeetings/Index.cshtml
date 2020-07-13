@@ -4,74 +4,83 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<main id="main">
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Sacrament Meeting Planner</h2>
+            <p>View All </p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <section id="about" class="about d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        <a asp-action="Create">Create New</a>
+                    </p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Details
+                                </th>
+                                <th>
+                                    Music
+                                </th>
+                                <th>
+                                    Prayers
+                                </th>
+                                <th>
+                                    Talks
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>@Html.DisplayNameFor(modelItem => item.MeetingDate): @Html.DisplayFor(modelItem => item.MeetingDate)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.ConductingLeader): @Html.DisplayFor(modelItem => item.ConductingLeader)</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>@Html.DisplayNameFor(modelItem => item.OpeningSong): @Html.DisplayFor(modelItem => item.OpeningSong)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.SacramentHymn): @Html.DisplayFor(modelItem => item.SacramentHymn)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.IntermediateNumber): @Html.DisplayFor(modelItem => item.IntermediateNumber)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.ClosingSong): @Html.DisplayFor(modelItem => item.ClosingSong)</li>
+                                        </ul>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MeetingDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ConductingLeader)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OpeningSong)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SacramentHymn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClosingSong)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IntermediateNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OpeningPrayer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClosingPrayer)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MeetingDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConductingLeader)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OpeningSong)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SacramentHymn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClosingSong)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IntermediateNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OpeningPrayer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClosingPrayer)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>@Html.DisplayNameFor(modelItem => item.OpeningPrayer): @Html.DisplayFor(modelItem => item.OpeningPrayer)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.ClosingPrayer): @Html.DisplayFor(modelItem => item.ClosingPrayer)</li>
+                                        </ul>
+
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            @foreach (var speaker in item.Speakers)
+                                            {
+                                                <li>@Html.DisplayFor(modelItem => speaker.Name): @Html.DisplayFor(modelItem => speaker.Subject)</li>
+                                            }
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
