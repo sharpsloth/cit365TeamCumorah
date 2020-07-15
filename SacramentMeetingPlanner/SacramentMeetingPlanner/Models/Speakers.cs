@@ -13,6 +13,8 @@ namespace SacramentMeetingPlanner.Models
         public int SacramentMeetingId { get; set; }
         [Required]
         public string Name { get; set; }
+
+        [Required]
         public string Subject { get; set; }
     }
 }
