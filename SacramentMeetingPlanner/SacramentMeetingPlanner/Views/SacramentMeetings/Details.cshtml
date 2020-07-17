@@ -33,16 +33,38 @@
                     @Html.DisplayFor(model => model.OpeningSong)
                 </dd>
                 <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.OpeningPrayer)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.OpeningPrayer)
+                </dd>
+                <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.SacramentHymn)
                 </dt>
                 <dd class="col-sm-10">
                     @Html.DisplayFor(model => model.SacramentHymn)
                 </dd>
                 <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.ClosingSong)
+                    @Html.DisplayNameFor(model => model.Speakers)
                 </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.ClosingSong)
+                    <table class="table">
+                        <tr>
+                            <th>Speaker</th>
+                            <th>Topic</th>
+                        </tr>
+                        @foreach (var item in Model.Speakers)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Subject)
+                                </td>
+                            </tr>
+                        }
+                    </table>
                 </dd>
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.IntermediateNumber)
@@ -51,10 +73,10 @@
                     @Html.DisplayFor(model => model.IntermediateNumber)
                 </dd>
                 <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.OpeningPrayer)
+                    @Html.DisplayNameFor(model => model.ClosingSong)
                 </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.OpeningPrayer)
+                    @Html.DisplayFor(model => model.ClosingSong)
                 </dd>
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.ClosingPrayer)

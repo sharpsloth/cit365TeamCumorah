@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SacramentMeetingPlanner.Data;
 using SacramentMeetingPlanner.Models;
+using SacramentMeetingPlanner.Models.ViewModels;
 
 namespace SacramentMeetingPlanner.Controllers
 {
@@ -78,12 +79,35 @@ namespace SacramentMeetingPlanner.Controllers
                 return NotFound();
             }
 
-            var sacramentMeeting = await _context.SacramentMeeting.FindAsync(id);
+            var sacramentMeeting = await _context.SacramentMeeting
+                .Include(s => s.Speakers)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.Id == id);
+            
             if (sacramentMeeting == null)
             {
                 return NotFound();
             }
+            PopulateSpeakersData(sacramentMeeting);
             return View(sacramentMeeting);
+        }
+
+        private void PopulateSpeakersData(SacramentMeeting sacramentMeeting)
+        {
+            var allSpeakers = _context.Speakers.Where(i => i.SacramentMeetingId == sacramentMeeting.Id);
+            var sacramentSpeakers = new HashSet<int>(sacramentMeeting.Speakers.Select(s => s.Id));
+            var viewModel = new List<SpeakersData>();
+            foreach (var speaker in allSpeakers)
+            {
+                viewModel.Add(new SpeakersData
+                {
+                    SpeakersID = speaker.Id,
+                    Name = speaker.Name,
+                    Subject = speaker.Subject,
+                    SacramentMeetingId = speaker.SacramentMeetingId
+                });
+            }
+            ViewData["Speakers"] = viewModel;
         }
 
         // POST: SacramentMeetings/Edit/5
@@ -91,34 +115,93 @@ namespace SacramentMeetingPlanner.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,MeetingDate,ConductingLeader,OpeningSong,SacramentHymn,ClosingSong,IntermediateNumber,OpeningPrayer,ClosingPrayer")] SacramentMeeting sacramentMeeting)
+        public async Task<IActionResult> Edit(int? id, Speakers[] speakers)
         {
-            if (id != sacramentMeeting.Id)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            var sacramentToUpdate = await _context.SacramentMeeting
+                .Include(i => i.Speakers)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            
+
+            if( await TryUpdateModelAsync<SacramentMeeting>(
+                sacramentToUpdate,
+                "",
+                i => i.MeetingDate,
+                i => i.ConductingLeader,
+                i => i.OpeningSong,
+                i => i.SacramentHymn,
+                i => i.ClosingSong,
+                i => i.IntermediateNumber,
+                i => i.OpeningPrayer,
+                i => i.ClosingPrayer))
             {
+                UpdateSacramentSpeakers(speakers, sacramentToUpdate);
                 try
                 {
-                    _context.Update(sacramentMeeting);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateException)
                 {
-                    if (!SacramentMeetingExists(sacramentMeeting.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError("", "Unable to save changes. " +
+                        "Try again, and if the problem persistes, " +
+                        "see your system administrator.");
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(sacramentMeeting);
+            UpdateSacramentSpeakers(speakers, sacramentToUpdate);
+            PopulateSpeakersData(sacramentToUpdate);
+            return View(sacramentToUpdate);
+        }
+
+        private void UpdateSacramentSpeakers(Speakers[] speakers, SacramentMeeting sacramentToUpdate)
+        {
+            if (speakers == null)
+            {
+                sacramentToUpdate.Speakers = new List<Speakers>();
+                return;
+            }
+            // set of Ids of all speakers currently connected to edited sacramantMeeting
+            var sacramentSpeakers = new HashSet<int>
+                (sacramentToUpdate.Speakers.Select(c => c.Id));
+           
+            //set of edited speakers
+            var speakersHS = new HashSet<Speakers>(speakers);
+            //create set of edited speaker IDs
+            var speakerIDs = new HashSet<int>();
+            // add each ID to the set
+            foreach (var speaker in speakersHS) 
+            {
+                speakerIDs.Add(speaker.Id);
+                // if it is not already connected to the edited sacramentMeeting
+                if (!sacramentSpeakers.Contains(speaker.Id))
+                {
+                    // add the speaker
+                    sacramentToUpdate.Speakers.Add(new Speakers { SacramentMeetingId = sacramentToUpdate.Id, Name = speaker.Name, Subject = speaker.Subject });
+                }
+            }
+
+            // for each speaker in the database connected to the edited sacramentMeeting
+            foreach (var speaker in _context.Speakers.Where(r => sacramentSpeakers.Contains(r.Id)))
+            {
+                // if it is found on the edited speaker list
+                if (speakerIDs.Contains(speaker.Id))
+                {
+                    // update the speaker
+                    sacramentToUpdate.Speakers.Add(speaker);
+                }
+                // if it is not found on the edited speaker list
+                else
+                {
+                    // delete the speaker
+                    Speakers speakersToRemove = sacramentToUpdate.Speakers.FirstOrDefault(i => i.Id == speaker.Id);
+                    _context.Remove(speakersToRemove);
+                }
+            }
         }
 
         // GET: SacramentMeetings/Delete/5
