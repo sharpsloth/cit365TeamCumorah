@@ -6,8 +6,8 @@
 
 <main id="main">
     <div class="breadcrumbs" data-aos="fade-in">
-        <div class="container">
-            <h2>Sacrament Meeting Planner</h2>
+        <div id="pageTitle" class="container">
+            <h2>Sacrament Program</h2>
             <p>Details</p>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -87,9 +87,9 @@
             </dl>
             <div>
                 <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                <a href="#" onclick="printIt('printArea')">Print</a> |
                 <a asp-action="Index">Back to List</a>
             </div>
-            <button onclick="printIt('printArea')" class="get-started-btn">Print</button>
         </div>
     </section>
 </main>

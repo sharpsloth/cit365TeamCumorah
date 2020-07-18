@@ -6,8 +6,8 @@
 
 <main id="main">
     <div class="breadcrumbs" data-aos="fade-in">
-        <div class="container">
-            <h2>Sacrament Meeting Planner</h2>
+        <div id="pageTitle" class="container">
+            <h2>Sacrament Program Planners</h2>
             <p>View All </p>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>
-                        <a asp-action="Create">Create New</a> | <a href="#" onclick="printIt(printArea)">Print</a>
+                        <a asp-action="Create">Create New</a> | <a href="#" onclick="printIt('printArea')">Print</a>
                     </p>
                     <table id="printArea" class="table">
                         <thead>

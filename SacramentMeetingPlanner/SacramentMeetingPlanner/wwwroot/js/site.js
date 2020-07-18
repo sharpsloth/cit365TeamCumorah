@@ -4,12 +4,16 @@
 // Write your JavaScript code.
 
 function printIt(printArea) {
+    var printTitle = document.getElementById("pageTitle").innerHTML;
+    console.log(printTitle);
     var printContents = document.getElementById("printArea").innerHTML;
-    var originalContents = document.body.innerHTML;
+    console.log(printContents);
+    var printPage = document.body.innerHTML;
 
-    document.body.innerHTML = printContents;
+    document.body.innerHTML = printTitle + printContents;
+    //document.body.innerHTML = printContents;
 
     window.print();
 
-    document.body.innerHTML = originalContents;
+    document.body.innerHTML = printPage;
 }
