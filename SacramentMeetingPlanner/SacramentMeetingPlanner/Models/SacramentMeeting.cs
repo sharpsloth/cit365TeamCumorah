@@ -20,19 +20,15 @@ namespace SacramentMeetingPlanner.Models
         public string ConductingLeader { get; set; }
 
         [Display(Name = "Opening Song")]
-        [Range(1, 341)]
         public string OpeningSong { get; set; }
 
         [Display(Name = "Sacrament Hymn")]
-        [Range(1, 341)]
         public string SacramentHymn { get; set; }
 
         [Display(Name = "Closing Song")]
-        [Range(1, 341)]
         public string ClosingSong { get; set; }
 
         [Display(Name = "Intermediate Song")]
-        [Range(1, 341)]
         public string IntermediateNumber { get; set; }
 
         [Display(Name = "Opening Prayer")]
