@@ -8,7 +8,6 @@
     <div class="breadcrumbs" data-aos="fade-in">
         <div id="pageTitle" class="container">
             <h2>Sacrament Program Planners</h2>
-            <p>View All </p>
         </div>
     </div><!-- End Breadcrumbs -->
     <section id="about" class="about d-flex justify-content-center align-items-center">
@@ -67,7 +66,7 @@
                                         <ul>
                                             @foreach (var speaker in item.Speakers)
                                             {
-                                                <li>@Html.DisplayFor(modelItem => speaker.Name): @Html.DisplayFor(modelItem => speaker.Subject)</li>
+                                             <li>@Html.DisplayFor(modelItem => speaker.Name): @Html.DisplayFor(modelItem => speaker.Subject)</li>
                                             }
                                         </ul>
                                     </td>
