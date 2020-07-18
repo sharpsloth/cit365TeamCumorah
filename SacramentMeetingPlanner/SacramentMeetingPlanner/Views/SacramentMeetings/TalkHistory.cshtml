@@ -18,7 +18,8 @@
                     <p>
                         <a href="#" onclick="printIt('printArea')">Print</a>
                     </p>
-                    <table id="printArea" class="table">
+                    <div  id="printArea" >
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>
@@ -35,13 +36,11 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                            
                                 @foreach (var speaker in item.Speakers)
                                 {<tr>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.MeetingDate)
                                     </td>
-
                                     <td>
                                         @Html.DisplayFor(modelItem => speaker.Name)
                                     </td>
@@ -51,7 +50,7 @@
                                 </tr>}
                             }
                         </tbody>
-                    </table>
+                    </table></div>
                 </div>
             </div>
         </div>
