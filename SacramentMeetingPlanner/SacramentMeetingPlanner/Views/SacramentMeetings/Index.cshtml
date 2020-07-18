@@ -18,7 +18,8 @@
                     <p>
                         <a asp-action="Create">Create New</a> | <a href="#" onclick="printIt('printArea')">Print</a>
                     </p>
-                    <table id="printArea" class="table">
+                    <div id="printArea">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>
@@ -71,14 +72,17 @@
                                         </ul>
                                     </td>
                                     <td>
-                                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                                        <ul style="list-style-type:none;">
+                                            <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
+                                            <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
+                                            <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
+                                        </ul>
                                     </td>
                                 </tr>
                             }
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>
