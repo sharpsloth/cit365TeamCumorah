@@ -29,6 +29,16 @@ namespace SacramentMeetingPlanner.Controllers
             return View(await sacrament.ToListAsync());
         }
 
+        // GET: SacramentMeetings Talk History
+        public async Task<IActionResult> TalkHistory()
+        {
+            var sacrament = _context.SacramentMeeting
+                .Include(s => s.Speakers)
+                .AsNoTracking();
+            return View(await sacrament.ToListAsync());
+        }
+
+
         // GET: SacramentMeetings/Details/5
         public async Task<IActionResult> Details(int? id)
         {
