@@ -13,7 +13,7 @@
     </div><!-- End Breadcrumbs -->
     <section id="about" class="about d-flex justify-content-center align-items-center">
         <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-            <dl class="row">
+            <dl id="printArea" class="row">
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.MeetingDate)
                 </dt>
@@ -67,7 +67,7 @@
                 <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
                 <a asp-action="Index">Back to List</a>
             </div>
+            <button onclick="printIt('printArea')" class="get-started-btn">Print</button>
         </div>
-
     </section>
 </main>
