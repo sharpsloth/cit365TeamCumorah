@@ -13,10 +13,12 @@ namespace SacramentMeetingPlanner.Models
         public int SacramentMeetingId { get; set; }
         [Required]
         [Display(Name = "Name")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string Name { get; set; }
 
         [Required]
         [Display(Name = "Subject")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string Subject { get; set; }
     }
 }
