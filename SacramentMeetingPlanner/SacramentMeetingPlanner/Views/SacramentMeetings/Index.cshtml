@@ -1,0 +1,89 @@
+﻿@model IEnumerable<SacramentMeetingPlanner.Models.SacramentMeeting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main id="main">
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div id="pageTitle" class="container">
+            <h2>Sacrament Program Planners</h2>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <section id="about" class="about d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        <a asp-action="Create">Create New</a> | <a href="#" onclick="printIt('printArea')">Print</a>
+                    </p>
+                    <div id="printArea">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Details
+                                </th>
+                                <th>
+                                    Music
+                                </th>
+                                <th>
+                                    Prayers
+                                </th>
+                                <th>
+                                    Talks
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>@Html.DisplayNameFor(modelItem => item.MeetingDate): @Html.DisplayFor(modelItem => item.MeetingDate)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.ConductingLeader): @Html.DisplayFor(modelItem => item.ConductingLeader)</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>@Html.DisplayNameFor(modelItem => item.OpeningSong): @Html.DisplayFor(modelItem => item.OpeningSong)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.SacramentHymn): @Html.DisplayFor(modelItem => item.SacramentHymn)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.IntermediateNumber): @Html.DisplayFor(modelItem => item.IntermediateNumber)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.ClosingSong): @Html.DisplayFor(modelItem => item.ClosingSong)</li>
+                                        </ul>
+
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>@Html.DisplayNameFor(modelItem => item.OpeningPrayer): @Html.DisplayFor(modelItem => item.OpeningPrayer)</li>
+                                            <li>@Html.DisplayNameFor(modelItem => item.ClosingPrayer): @Html.DisplayFor(modelItem => item.ClosingPrayer)</li>
+                                        </ul>
+
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            @foreach (var speaker in item.Speakers)
+                                            {
+                                             <li>@Html.DisplayFor(modelItem => speaker.Name): @Html.DisplayFor(modelItem => speaker.Subject)</li>
+                                            }
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul style="list-style-type:none;">
+                                            <li><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></li>
+                                            <li><a asp-action="Details" asp-route-id="@item.Id">Details</a></li>
+                                            <li><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

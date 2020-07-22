@@ -39,8 +39,8 @@
             // 
             this.newQuote.BackColor = System.Drawing.Color.White;
             this.newQuote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newQuote.Font = new System.Drawing.Font("Roboto Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newQuote.Location = new System.Drawing.Point(366, 98);
+            this.newQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newQuote.Location = new System.Drawing.Point(34, 444);
             this.newQuote.Margin = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.newQuote.Name = "newQuote";
             this.newQuote.Size = new System.Drawing.Size(200, 50);
@@ -53,8 +53,8 @@
             // 
             this.exitBttn.BackColor = System.Drawing.Color.White;
             this.exitBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBttn.Font = new System.Drawing.Font("Roboto Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBttn.Location = new System.Drawing.Point(366, 338);
+            this.exitBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBttn.Location = new System.Drawing.Point(823, 444);
             this.exitBttn.Margin = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.exitBttn.Name = "exitBttn";
             this.exitBttn.Size = new System.Drawing.Size(200, 50);
@@ -67,8 +67,8 @@
             // 
             this.searchQuotes.BackColor = System.Drawing.Color.White;
             this.searchQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchQuotes.Font = new System.Drawing.Font("Roboto Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchQuotes.Location = new System.Drawing.Point(366, 258);
+            this.searchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchQuotes.Location = new System.Drawing.Point(561, 444);
             this.searchQuotes.Margin = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.searchQuotes.Name = "searchQuotes";
             this.searchQuotes.Size = new System.Drawing.Size(200, 50);
@@ -81,8 +81,8 @@
             // 
             this.viewQuotes.BackColor = System.Drawing.Color.White;
             this.viewQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewQuotes.Font = new System.Drawing.Font("Roboto Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewQuotes.Location = new System.Drawing.Point(366, 178);
+            this.viewQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewQuotes.Location = new System.Drawing.Point(293, 444);
             this.viewQuotes.Margin = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.viewQuotes.Name = "viewQuotes";
             this.viewQuotes.Size = new System.Drawing.Size(200, 50);
@@ -95,19 +95,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(600, 412);
+            this.BackgroundImage = global::MegaDesk_Mendenhall.Properties.Resources.macbook_336704_1920_1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1057, 518);
             this.Controls.Add(this.viewQuotes);
             this.Controls.Add(this.searchQuotes);
             this.Controls.Add(this.exitBttn);
             this.Controls.Add(this.newQuote);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
 
         }

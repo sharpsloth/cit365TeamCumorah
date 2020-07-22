@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SacramentMeetingPlanner.Models.SacramentMeeting>
+
+@{
+    ViewData["Title"] = "Talk History";
+}
+
+<main id="main">
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div id="pageTitle" class="container">
+            <h2>Talk History</h2>
+
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <section id="about" class="about d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form asp-action="TalkHistory" method="get">
+                        <div class="form-actions no-color">
+                            <p>
+                                <a href="#" onclick="printIt('printArea')">Print</a>
+                            </p>
+                        </div>
+                    </form>
+                    <div id="printArea">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Meeting Date
+                                    </th>
+                                    <th>
+                                        Speaker Name
+                                    </th>
+                                    <th>
+                                        Talk Topic
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    @foreach (var speaker in item.Speakers)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.MeetingDate)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => speaker.Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => speaker.Subject)
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

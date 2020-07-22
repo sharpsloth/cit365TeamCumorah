@@ -1,0 +1,74 @@
+﻿@model SacramentMeetingPlanner.Models.SacramentMeeting
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<main id="main">
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Sacrament Meeting Planner</h2>
+            <p>Delete</p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <section id="about" class="about d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.MeetingDate)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MeetingDate)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ConductingLeader)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ConductingLeader)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.OpeningSong)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.OpeningSong)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SacramentHymn)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SacramentHymn)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ClosingSong)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ClosingSong)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.IntermediateNumber)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.IntermediateNumber)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.OpeningPrayer)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.OpeningPrayer)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ClosingPrayer)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ClosingPrayer)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a asp-action="Index">Back to List</a>
+            </form>
+        </div>
+    </section>
+</main>

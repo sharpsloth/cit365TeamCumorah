@@ -1,0 +1,80 @@
+﻿@model SacramentMeetingPlanner.Models.SacramentMeeting
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<main id="main">
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Sacrament Meeting Planner</h2>
+            <p>Create New </p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <section id="about" class="about d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="MeetingDate" class="control-label"></label>
+                            <input asp-for="MeetingDate" class="form-control" />
+                            <span asp-validation-for="MeetingDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ConductingLeader" class="control-label"></label>
+                            <input asp-for="ConductingLeader" class="form-control" />
+                            <span asp-validation-for="ConductingLeader" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="OpeningSong" class="control-label"></label>
+                            <input asp-for="OpeningSong" class="form-control" />
+                            <span asp-validation-for="OpeningSong" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SacramentHymn" class="control-label"></label>
+                            <input asp-for="SacramentHymn" class="form-control" />
+                            <span asp-validation-for="SacramentHymn" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ClosingSong" class="control-label"></label>
+                            <input asp-for="ClosingSong" class="form-control" />
+                            <span asp-validation-for="ClosingSong" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="IntermediateNumber" class="control-label"></label>
+                            <input asp-for="IntermediateNumber" class="form-control" />
+                            <span asp-validation-for="IntermediateNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="OpeningPrayer" class="control-label"></label>
+                            <input asp-for="OpeningPrayer" class="form-control" />
+                            <span asp-validation-for="OpeningPrayer" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ClosingPrayer" class="control-label"></label>
+                            <input asp-for="ClosingPrayer" class="form-control" />
+                            <span asp-validation-for="ClosingPrayer" class="text-danger"></span>
+                        </div>
+
+                        <div id="addSpeakerTarget"></div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                            <button type="button" onclick="addSpeaker()" class="btn btn-secondary">Add Speaker</button>
+                        </div>
+                    </form>
+                    <div>
+                        <a asp-action="Index">Back to List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
