@@ -57,8 +57,12 @@
                             <input asp-for="ClosingPrayer" class="form-control" />
                             <span asp-validation-for="ClosingPrayer" class="text-danger"></span>
                         </div>
+
+                        <div id="addSpeakerTarget"></div>
+
                         <div class="form-group">
                             <input type="submit" value="Create" class="btn btn-primary" />
+                            <button type="button" onclick="addSpeaker()" class="btn btn-secondary">Add Speaker</button>
                         </div>
                     </form>
                     <div>
