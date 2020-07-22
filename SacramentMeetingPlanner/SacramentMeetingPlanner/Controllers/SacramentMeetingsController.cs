@@ -30,7 +30,7 @@ namespace SacramentMeetingPlanner.Controllers
         }
 
         // GET: SacramentMeetings Talk History
-        public async Task<IActionResult> TalkHistory()
+        public async Task<IActionResult> TalkHistory(string sortOrder)
         {
             var sacrament = _context.SacramentMeeting
                 .Include(s => s.Speakers)
