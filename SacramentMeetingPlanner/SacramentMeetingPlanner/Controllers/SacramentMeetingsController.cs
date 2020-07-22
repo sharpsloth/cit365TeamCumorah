@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using SacramentMeetingPlanner.Data;
 using SacramentMeetingPlanner.Models;
 using SacramentMeetingPlanner.Models.ViewModels;
@@ -70,8 +71,9 @@ namespace SacramentMeetingPlanner.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,MeetingDate,ConductingLeader,OpeningSong,SacramentHymn,ClosingSong,IntermediateNumber,OpeningPrayer,ClosingPrayer")] SacramentMeeting sacramentMeeting)
+        public async Task<IActionResult> Create([Bind("Id,MeetingDate,ConductingLeader,OpeningSong,SacramentHymn,ClosingSong,IntermediateNumber,OpeningPrayer,ClosingPrayer, Speakers")] SacramentMeeting sacramentMeeting)
         {
+            Console.WriteLine(JsonConvert.SerializeObject(sacramentMeeting));
             if (ModelState.IsValid)
             {
                 _context.Add(sacramentMeeting);
