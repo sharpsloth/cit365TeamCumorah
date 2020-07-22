@@ -30,11 +30,15 @@ function addSpeaker() {
     template += '<div class="speaker" >'
     template += '<div class="form-group">'
     template += '<label class="control-label">Speaker Name</label>'
-    template += '<input class="form-control" name="Speakers[' + nSpeakers+'].Name" />'
+    template += '<input class="form-control" name="Speakers[' + nSpeakers + '].Name" />'
+    template += '<span asp - validation -for= "ClosingPrayer" class= "text-danger" ></span>'
+
     template += '</div >'
     template += '<div class="form-group">'
     template += '<label class="control-label">Speaker Subject</label>'
-    template += '<input class="form-control" name="Speakers[' + nSpeakers +'].Subject" />'
+    template += '<input class="form-control" name="Speakers[' + nSpeakers + '].Subject" />'
+    template += '<span asp - validation -for= "ClosingPrayer" class= "text-danger" ></span>'
+
     template += '</div>'
     template += '</div>'
 
