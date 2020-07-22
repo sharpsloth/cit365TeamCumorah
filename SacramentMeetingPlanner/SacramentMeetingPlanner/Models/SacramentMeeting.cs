@@ -17,30 +17,39 @@ namespace SacramentMeetingPlanner.Models
 
         [Required]
         [Display(Name = "Conducting Leader")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string ConductingLeader { get; set; }
 
         [Display(Name = "Opening Song")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string OpeningSong { get; set; }
 
         [Display(Name = "Sacrament Hymn")]
+        [Required]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string SacramentHymn { get; set; }
 
         [Display(Name = "Closing Song")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string ClosingSong { get; set; }
 
         [Display(Name = "Intermediate Song")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string IntermediateNumber { get; set; }
 
         [Display(Name = "Opening Prayer")]
         [Required]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string OpeningPrayer { get; set; }
 
         [Display(Name = "Closing Prayer")]
         [Required]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public string ClosingPrayer { get; set; }
 
         [Display(Name = "Speakers")]
         [Required]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(30)]
         public List<Speakers> Speakers { get; set; }
     }
 }
