@@ -48,8 +48,7 @@ namespace SacramentMeetingPlanner.Models
         public string ClosingPrayer { get; set; }
 
         [Display(Name = "Speakers")]
-        [Required]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(40)]
+       
         public List<Speakers> Speakers { get; set; }
     }
 }

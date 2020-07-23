@@ -207,12 +207,7 @@ namespace SacramentMeetingPlanner.Controllers
                     sacramentToUpdate.Speakers.Add(speaker);
                 }
                 // if it is not found on the edited speaker list
-                else
-                {
-                    // delete the speaker
-                    Speakers speakersToRemove = sacramentToUpdate.Speakers.FirstOrDefault(i => i.Id == speaker.Id);
-                    _context.Remove(speakersToRemove);
-                }
+              
             }
         }
 
