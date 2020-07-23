@@ -21,16 +21,16 @@ namespace SacramentMeetingPlanner.Models
         public string ConductingLeader { get; set; }
 
         [Display(Name = "Opening Song")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(40)]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z"",'’\s-]*$"), StringLength(40)]
         public string OpeningSong { get; set; }
 
         [Display(Name = "Sacrament Hymn")]
         [Required]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(40)]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z"",'’\s-]*$"), StringLength(40)]
         public string SacramentHymn { get; set; }
 
         [Display(Name = "Closing Song")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(40)]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z"",'’\s-]*$"), StringLength(40)]
         public string ClosingSong { get; set; }
 
         [Display(Name = "Intermediate Song")]
